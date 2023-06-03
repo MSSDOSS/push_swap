@@ -1,31 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swap.h                                        :+:      :+:    :+:   */
+/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hel-haia <hel-haia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/05/03 21:24:36 by hel-haia          #+#    #+#             */
-/*   Updated: 2023/06/02 17:54:19 by hel-haia         ###   ########.fr       */
+/*   Created: 2022/10/13 10:58:19 by hel-haia          #+#    #+#             */
+/*   Updated: 2023/06/02 18:03:40 by hel-haia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PUSH_SWAP_H
-# define PUSH_SWAP_H
+#include "libft.h"
 
-# include <stdio.h>
-# include <unistd.h>
-# include <stdlib.h>
-# include "libft/libft.h"
-
-struct t_list
+size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 {
-	int next;
-	int previous;
-}	s_list;
+	size_t	i;
+	size_t	j;
 
-
-void	check_dup(char **av);
-
-
-#endif
+	i = 0;
+	j = ft_strlen(src);
+	if (dstsize == 0)
+		return (j);
+	if (dstsize > 0)
+	{
+		while (src[i] && i < dstsize - 1)
+		{
+			dst[i] = src[i];
+			i++;
+		}
+		dst[i] = '\0';
+	}
+	return (j);
+}

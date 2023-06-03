@@ -1,31 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swap.h                                        :+:      :+:    :+:   */
+/*   ft_bzero.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hel-haia <hel-haia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/05/03 21:24:36 by hel-haia          #+#    #+#             */
-/*   Updated: 2023/06/02 17:54:19 by hel-haia         ###   ########.fr       */
+/*   Created: 2022/10/16 09:15:11 by hel-haia          #+#    #+#             */
+/*   Updated: 2022/10/16 10:33:00 by hel-haia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PUSH_SWAP_H
-# define PUSH_SWAP_H
+#include "libft.h"
 
-# include <stdio.h>
-# include <unistd.h>
-# include <stdlib.h>
-# include "libft/libft.h"
-
-struct t_list
+void	ft_bzero(void *s, size_t n)
 {
-	int next;
-	int previous;
-}	s_list;
+	size_t	i;
+	char	*p;
 
-
-void	check_dup(char **av);
-
-
-#endif
+	p = s;
+	i = 0;
+	while (i < n)
+	{
+		p[i] = 0;
+		i++;
+	}
+}

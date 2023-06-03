@@ -4,4 +4,4 @@ NAME = push_swap
 
 all : $(NAME)
 
-NAME : 
+$(NAME) : $(OBJECTS) 

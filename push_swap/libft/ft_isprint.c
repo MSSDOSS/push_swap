@@ -1,31 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swap.h                                        :+:      :+:    :+:   */
+/*   ft_isprint.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hel-haia <hel-haia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/05/03 21:24:36 by hel-haia          #+#    #+#             */
-/*   Updated: 2023/06/02 17:54:19 by hel-haia         ###   ########.fr       */
+/*   Created: 2022/10/07 10:39:44 by hel-haia          #+#    #+#             */
+/*   Updated: 2023/06/02 18:03:09 by hel-haia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PUSH_SWAP_H
-# define PUSH_SWAP_H
+#include "libft.h"
 
-# include <stdio.h>
-# include <unistd.h>
-# include <stdlib.h>
-# include "libft/libft.h"
-
-struct t_list
+int	ft_isprint(int c)
 {
-	int next;
-	int previous;
-}	s_list;
-
-
-void	check_dup(char **av);
-
-
-#endif
+	if (c >= 32 && c < 127)
+		return (1);
+	return (0);
+}

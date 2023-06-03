@@ -6,7 +6,7 @@
 /*   By: hel-haia <hel-haia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/04 20:22:43 by hel-haia          #+#    #+#             */
-/*   Updated: 2023/05/04 20:44:19 by hel-haia         ###   ########.fr       */
+/*   Updated: 2023/06/02 17:54:45 by hel-haia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,9 +21,11 @@ void check_dup(char **av)
 		j =  i +1;
 		while(av[j])
 		{
-			if(atoi(av[j]) == atoi(av[i]))
+			if(ft_atoi(av[j]) == ft_atoi(av[i]))
 			{
-				printf("ERROR: Duplicated args\n");
+				printf("===============================");
+				printf("\n===>ERROR: Duplicated args!<===\n");
+				printf("===============================\n");
 				exit(1);
 			}
 			j++;

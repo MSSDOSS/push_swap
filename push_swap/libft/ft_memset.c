@@ -1,31 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swap.h                                        :+:      :+:    :+:   */
+/*   ft_memset.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hel-haia <hel-haia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/05/03 21:24:36 by hel-haia          #+#    #+#             */
-/*   Updated: 2023/06/02 17:54:19 by hel-haia         ###   ########.fr       */
+/*   Created: 2022/10/07 12:12:42 by hel-haia          #+#    #+#             */
+/*   Updated: 2022/10/16 12:06:29 by hel-haia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PUSH_SWAP_H
-# define PUSH_SWAP_H
+#include "libft.h"
 
-# include <stdio.h>
-# include <unistd.h>
-# include <stdlib.h>
-# include "libft/libft.h"
-
-struct t_list
+void	*ft_memset(void *b, int c, size_t n)
 {
-	int next;
-	int previous;
-}	s_list;
+	size_t			i;
+	unsigned char	*p;
+	unsigned char	a;
 
-
-void	check_dup(char **av);
-
-
-#endif
+	a = (unsigned char)c;
+	p = (unsigned char *)b;
+	i = 0;
+	while (i < n)
+	{
+		*p = a;
+		p++;
+		i++;
+	}
+	return (b);
+}

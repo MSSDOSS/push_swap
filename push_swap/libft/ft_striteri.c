@@ -1,31 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swap.h                                        :+:      :+:    :+:   */
+/*   ft_striteri.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hel-haia <hel-haia@student.42.fr>          +#+  +:+       +#+        */
+/*   By: hel-haia <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/05/03 21:24:36 by hel-haia          #+#    #+#             */
-/*   Updated: 2023/06/02 17:54:19 by hel-haia         ###   ########.fr       */
+/*   Created: 2022/10/31 06:27:27 by hel-haia          #+#    #+#             */
+/*   Updated: 2022/11/01 18:02:47 by hel-haia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PUSH_SWAP_H
-# define PUSH_SWAP_H
+#include  "libft.h"
 
-# include <stdio.h>
-# include <unistd.h>
-# include <stdlib.h>
-# include "libft/libft.h"
-
-struct t_list
+void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 {
-	int next;
-	int previous;
-}	s_list;
+	size_t	i;
 
-
-void	check_dup(char **av);
-
-
-#endif
+	i = 0;
+	if (s && f)
+	{
+		while (i < ft_strlen(s))
+		{
+			(*f)(i, &s[i]);
+			i++;
+		}
+	}
+}
